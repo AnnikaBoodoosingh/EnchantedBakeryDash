@@ -17,9 +17,9 @@ public class StartScreen extends JPanel {
     public StartScreen(GameWindow gameWindow) {
         this.gameWindow = gameWindow;  // Store the reference to GameWindow
 
-        backgroundImage = ImageManager.loadImage("menu.png");
-        startButtonImage = ImageManager.loadImage("start.png");
-        exitButtonImage = ImageManager.loadImage("exit.png");
+        backgroundImage = ImageManager.loadImage("Images/menu.png");
+        startButtonImage = ImageManager.loadImage("Images/start.png");
+        exitButtonImage = ImageManager.loadImage("Images/exit.png");
 
         // Set button sizes
         int buttonWidth = startButtonImage.getWidth(null) / 2;
@@ -30,7 +30,8 @@ public class StartScreen extends JPanel {
         exitButtonArea = new Rectangle(0, 0, buttonWidth, buttonHeight);
         
         soundManager = SoundManager.getInstance();  // Ensure SoundManager is initialized
-        soundManager.playClip("jazz.wav", true);
+        soundManager.loadClip("Sounds/jazz.wav");
+        soundManager.playClip("Sounds/jazz.wav", true);
 
         // Add mouse listener for button clicks
         addMouseListener(new MouseAdapter() {

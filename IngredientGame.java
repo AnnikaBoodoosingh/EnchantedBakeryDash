@@ -56,24 +56,24 @@ public class IngredientGame extends JPanel implements ActionListener, KeyListene
         addKeyListener(this);
 
         soundManager = SoundManager.getInstance();
-        soundManager.loadClip("collect.wav");
-        soundManager.loadClip("wrong.wav");
+        soundManager.loadClip("Sounds/collect.wav");
+        soundManager.loadClip("Sounds/wrong.wav");
         //soundManager.loadClip("stir.wav");
 
         try {
-            ingredientImages.put("Egg", ImageManager.loadImage("egg.png"));
-            ingredientImages.put("Butter", ImageManager.loadImage("butter.png"));
-            ingredientImages.put("Sugar", ImageManager.loadImage("sugarCube.png"));
-            ingredientImages.put("Flour", ImageManager.loadImage("flour.png"));
-            ingredientImages.put("Milk", ImageManager.loadImage("milk.png"));
-            ingredientImages.put("BadEgg", ImageManager.loadImage("badEgg.png"));
-            ingredientImages.put("BadMilk", ImageManager.loadImage("badMilk.png"));
-            ingredientImages.put("BadSugar", ImageManager.loadImage("sugarCubeBad.png"));
-            ingredientImages.put("BadButter", ImageManager.loadImage("badButter.png"));
-            ingredientImages.put("BadFlour", ImageManager.loadImage("badFlour.png"));
+            ingredientImages.put("Egg", ImageManager.loadImage("Images/egg.png"));
+            ingredientImages.put("Butter", ImageManager.loadImage("Images/butter.png"));
+            ingredientImages.put("Sugar", ImageManager.loadImage("Images/sugarCube.png"));
+            ingredientImages.put("Flour", ImageManager.loadImage("Images/flour.png"));
+            ingredientImages.put("Milk", ImageManager.loadImage("Images/milk.png"));
+            ingredientImages.put("BadEgg", ImageManager.loadImage("Images/badEgg.png"));
+            ingredientImages.put("BadMilk", ImageManager.loadImage("Images/badMilk.png"));
+            ingredientImages.put("BadSugar", ImageManager.loadImage("Images/sugarCubeBad.png"));
+            ingredientImages.put("BadButter", ImageManager.loadImage("Images/badButter.png"));
+            ingredientImages.put("BadFlour", ImageManager.loadImage("Images/badFlour.png"));
 
-            mixingImage = ImageManager.loadImage("mixing.png"); // Assuming this is the sprite sheet
-            Image bowlImage = ImageManager.loadImage("bowl.png");
+            mixingImage = ImageManager.loadImage("Images/mixing.png"); // Assuming this is the sprite sheet
+            Image bowlImage = ImageManager.loadImage("Images/bowl.png");
             bowl = new Bowl(GAME_WIDTH, GAME_HEIGHT, bowlImage);
         } catch (Exception e) {
             e.printStackTrace();
@@ -286,7 +286,7 @@ public class IngredientGame extends JPanel implements ActionListener, KeyListene
                     int caughtSoFar = caughtMap.getOrDefault(ingredient.name, 0);
 
                     if (Arrays.asList(Ingredient.BAD_INGREDIENTS).contains(ingredient.name) || caughtSoFar >= required) {
-                        soundManager.playClip("wrong.wav", false);
+                        soundManager.playClip("Sounds/wrong.wav", false);
                             if (timeLeft > 0) {
                                 timeLeft -= 5; // Penalize the player
                                 timeLeft = Math.max(timeLeft, 0); // Prevent going negative
@@ -295,7 +295,7 @@ public class IngredientGame extends JPanel implements ActionListener, KeyListene
                             //timeLeft -= 5;
                         }
                     } else {
-                        soundManager.playClip("collect.wav", false);
+                        soundManager.playClip("Sounds/collect.wav", false);
                         caughtMap.put(ingredient.name, caughtSoFar + 1);
                     }
 

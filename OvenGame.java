@@ -27,10 +27,10 @@ public class OvenGame extends JPanel implements ActionListener, KeyListener {
         
         String imageName;
             switch (selectedRecipeIndex) {
-                case 1: imageName = "FairyCookie.png"; break;
-                case 2: imageName = "pastry.png"; break;
-                case 3: imageName = "FairyCake.png"; break;
-                default: imageName = "FairyCookie.png"; break;  // Fallback
+                case 1: imageName = "Images/FairyCookie.png"; break;
+                case 2: imageName = "Images/pastry.png"; break;
+                case 3: imageName = "Images/FairyCake.png"; break;
+                default: imageName = "Images/FairyCookie.png"; break;  // Fallback
         }
         pastry = new Pastry(imageName,selectedRecipeIndex);
 
@@ -43,8 +43,8 @@ public class OvenGame extends JPanel implements ActionListener, KeyListener {
         setDoubleBuffered(true);
 
         try {
-            ovenBg = ImageManager.loadBufferedImage("oven.png");
-            flameImg = ImageManager.loadBufferedImage("flame.png");
+            ovenBg = ImageManager.loadBufferedImage("Images/oven.png");
+            flameImg = ImageManager.loadBufferedImage("Images/flame.png");
 
             int flameW = flameImg.getWidth() / 6;
             int flameH = flameImg.getHeight() / 6;

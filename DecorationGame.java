@@ -29,10 +29,10 @@ public class DecorationGame extends JPanel implements KeyListener, MouseMotionLi
         
         String imageName;
         switch (selectedRecipeIndex) {
-            case 1: imageName = "FairyCookie.png"; break;
-            case 2: imageName = "pastry.png"; break;
-            case 3: imageName = "FairyCake.png"; break;
-            default: imageName = "FairyCookie.png"; break;  // Fallback
+            case 1: imageName = "Images/FairyCookie.png"; break;
+            case 2: imageName = "Images/pastry.png"; break;
+            case 3: imageName = "Images/FairyCake.png"; break;
+            default: imageName = "Images/FairyCookie.png"; break;  // Fallback
         }
         pastry = new Pastry(imageName, selectedRecipeIndex);
 

@@ -8,8 +8,6 @@ public class SoundManager {
 
     private SoundManager() {
         clips = new HashMap<String, Clip>();
-        // Example: Load the jazz.wav sound clip during initialization
-        loadClip("jazz.wav");
     }
 
     // Singleton method to get the instance of SoundManager
@@ -66,7 +64,7 @@ public class SoundManager {
         if (clip != null) {
             clip.stop();
         } else {
-            System.out.println("Clip not found: " + title);
+           System.out.println("Clip not found: " + title);
         }
     }
 

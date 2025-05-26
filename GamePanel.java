@@ -45,32 +45,33 @@ public class GamePanel extends JPanel {
 
     public GamePanel() {
         //setPreferredSize(new Dimension(800, 350));
-        bakerRight = new Baker("baker_right.png", 700, 90);
-        bakerLeft = new Baker("baker_left.png", 700, 90);
+        bakerRight = new Baker("Images/baker_right.png", 700, 90);
+        bakerLeft = new Baker("Images/baker_left.png", 700, 90);
         bakerRight.setPosition(50, 250);
         bakerLeft.setPosition(50, 250);
         
-        orderingStation = new Workstation(200, 100, 250, 200,"OrderStation.png");
-        mixingStation = new Workstation(550, 100, 250, 200, "IngredientStation.png");
-        bakingStation = new Workstation(850, 100, 250, 200,"OvenStation.png");
-        decoratingStation = new Workstation(1150, 100, 250, 200,"DecorStation.png");
+        orderingStation = new Workstation(200, 100, 250, 200,"Images/OrderStation.png");
+        mixingStation = new Workstation(550, 100, 250, 200, "Images/IngredientStation.png");
+        bakingStation = new Workstation(850, 100, 250, 200,"Images/OvenStation.png");
+        decoratingStation = new Workstation(1150, 100, 250, 200,"Images/DecorStation.png");
         //door = new Workstation(0,0,250,300,"Door", "door.png");
         
-        background = new Background(this,"wall.png",96);
+        background = new Background(this,"Images/wall.png",96);
         
         soundManager = SoundManager.getInstance();
-        soundManager.setVolume("jazz.wav", 0.8f);
-        soundManager.playClip("jazz.wav", true);
+        soundManager.loadClip("Sounds/jazz.wav");
+        soundManager.playClip("Sounds/jazz.wav", true);
+        soundManager.setVolume("Sounds/jazz.wav", 0.8f);
         
-        soundManager.loadClip("Cupcake.wav");
-        soundManager.loadClip("cookie.wav");
-        soundManager.loadClip("cake.wav");
-        soundManager.loadClip("AngryCupcake.wav");
-        soundManager.loadClip("AngryCookie.wav");
-        soundManager.loadClip("AngryCake.wav");
-        soundManager.setVolume("AngryCake.wav", 1.0f);
-        soundManager.setVolume("AngryCookie.wav", 1.0f);
-        soundManager.setVolume("AngryCupcake.wav", 1.0f);
+        soundManager.loadClip("Sounds/Cupcake.wav");
+        soundManager.loadClip("Sounds/cookie.wav");
+        soundManager.loadClip("Sounds/cake.wav");
+        soundManager.loadClip("Sounds/AngryCupcake.wav");
+        soundManager.loadClip("Sounds/AngryCookie.wav");
+        soundManager.loadClip("Sounds/AngryCake.wav");
+        soundManager.setVolume("Sounds/AngryCake.wav", 1.0f);
+        soundManager.setVolume("Sounds/AngryCookie.wav", 1.0f);
+        soundManager.setVolume("Sounds/AngryCupcake.wav", 1.0f);
         
         // Make sure the GamePanel can receive key events
         setFocusable(true);
@@ -167,23 +168,23 @@ public class GamePanel extends JPanel {
     
             // Play random sound based on soundChoice
             if (soundChoice == 1) {
-                soundManager.playClip("cookie.wav", false);
+                soundManager.playClip("Sounds/cookie.wav", false);
                 selectedRecipeName = 1;
             } else if (soundChoice == 2) {
-                soundManager.playClip("Cupcake.wav", false);
+                soundManager.playClip("Sounds/Cupcake.wav", false);
                 selectedRecipeName = 2;
             } else if (soundChoice == 3) {
-                soundManager.playClip("cake.wav", false);
+                soundManager.playClip("Sounds/cake.wav", false);
                 selectedRecipeName = 3;
             }
     
             // Create random customer based on customerChoice
             if (customerChoice == 1) {
-                customer = new Customer("fairy1.png", 90, 70, 80, 80);
+                customer = new Customer("Images/fairy1.png", 90, 70, 80, 80);
             } else if (customerChoice == 2) {
-                customer = new Customer("fairy2.png", 90, 70, 80, 80);
+                customer = new Customer("Images/fairy2.png", 90, 70, 80, 80);
             } else if (customerChoice == 3) {
-                customer = new Customer("fairy3.png", 90, 70, 80, 80);
+                customer = new Customer("Images/fairy3.png", 90, 70, 80, 80);
             }
     
             // Make the customer visible
@@ -217,9 +218,9 @@ public class GamePanel extends JPanel {
                 
                 // Play "angry" sound based on recipe
                 switch (selectedRecipeName) {
-                    case 1: soundManager.playClip("AngryCookie.wav", false); break;
-                    case 2: soundManager.playClip("AngryCupcake.wav", false); break;
-                    case 3: soundManager.playClip("AngryCake.wav", false); break;
+                    case 1: soundManager.playClip("Sounds/AngryCookie.wav", false); break;
+                    case 2: soundManager.playClip("Sounds/AngryCupcake.wav", false); break;
+                    case 3: soundManager.playClip("Sounds/AngryCake.wav", false); break;
                     default: break;
                 }
                 

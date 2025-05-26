@@ -1,13 +1,9 @@
 # EnchantedBakeryDash
 COMP 3609 - Game Programming Project
 
-## Project Structure / Notes on File Organization
+## Demo Video
 
-At this stage, the project’s asset files (images, sounds, etc.) are not yet fully organized into dedicated folders. This is due to time constraints and the need to maintain correct file path references to ensure the game runs properly.
-
-While the current structure may appear unorganized, the game is fully functional and meets the project requirements. Improving the folder organization is planned as part of future refinements to enhance maintainability and clarity.
-
-This approach reflects a focus on core gameplay functionality first, with ongoing improvements to project structure aligned with best practices in software development.
+https://www.youtube.com/watch?v=8zPSawUuCMA
 
 # Enchanted Bakery Dash
 
