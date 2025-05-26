@@ -55,6 +55,6 @@ Once the treat is perfectly baked, the real artistry begins. Players trace glowi
 
 ---
 
-## How to Run `GameApplication.java` in VS Code
+## How to Play 'Enchanted Bakery Dash':
 
 To run the game, run the `GameApplication.java` file
