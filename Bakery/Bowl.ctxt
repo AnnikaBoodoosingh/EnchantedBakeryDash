@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Bowl
+comment1.params=screenWidth\ screenHeight\ image
+comment1.target=Bowl(int,\ int,\ java.awt.Image)
+comment2.params=
+comment2.target=void\ moveLeft()
+comment3.params=
+comment3.target=void\ moveRight()
+comment4.params=g
+comment4.target=void\ draw(java.awt.Graphics)
+comment5.params=
+comment5.target=int\ getX()
+comment6.params=
+comment6.target=int\ getWidth()
+comment7.params=
+comment7.target=int\ getHeight()
+comment8.params=
+comment8.target=int\ getY()
+comment9.params=
+comment9.target=java.awt.Rectangle\ getBounds()
+numComments=10

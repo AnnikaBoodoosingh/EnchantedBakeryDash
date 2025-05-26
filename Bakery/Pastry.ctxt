@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Pastry
+comment1.params=pastryImagePath\ recipeIndex
+comment1.target=Pastry(java.lang.String,\ int)
+comment2.params=recipeIndex
+comment2.target=void\ scalePastry(int)
+comment3.params=
+comment3.target=java.awt.Image\ getScaledPastry()
+numComments=4

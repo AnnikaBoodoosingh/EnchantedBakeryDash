@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Baker
+comment1.params=spriteSheetPath\ newWidth\ newHeight
+comment1.target=Baker(java.lang.String,\ int,\ int)
+comment2.params=startX\ startY
+comment2.target=void\ setPosition(int,\ int)
+comment3.params=panelWidth
+comment3.target=void\ updateBoundaries(int)
+comment4.params=
+comment4.target=void\ moveRight()
+comment5.params=
+comment5.target=void\ moveLeft()
+comment6.params=g
+comment6.target=void\ draw(java.awt.Graphics)
+comment7.params=
+comment7.target=int\ getX()
+comment8.params=
+comment8.target=int\ getY()
+numComments=9

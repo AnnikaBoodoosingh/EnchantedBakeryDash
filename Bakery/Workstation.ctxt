@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Workstation
+comment1.params=x\ y\ width\ height\ imagePath
+comment1.target=Workstation(int,\ int,\ int,\ int,\ java.lang.String)
+comment2.params=g\ cameraX
+comment2.target=void\ draw(java.awt.Graphics,\ int)
+comment3.params=mouseX\ mouseY
+comment3.target=boolean\ isMouseOver(int,\ int)
+comment4.params=
+comment4.target=java.awt.Rectangle\ getBounds()
+comment5.params=
+comment5.target=int\ getX()
+comment6.params=
+comment6.target=int\ getWidth()
+numComments=7
